@@ -134,7 +134,7 @@ for(let i = 0; i < estadosNe.length; i++) {
 
 let exibir = estado => {
     for(let info in estado) {
-        console.log('Propiedade: ${info}; Valor: ${estado[info]}')
+        console.log(`Propriedade: ${info}; Valor: ${estado[info]}`)
     }
 }
 
