@@ -1,6 +1,9 @@
 // Pré-requisito para a busca binária: o conjunto de dados
 // PRECISA estar ordenado pelo critério de busca
 let comp = 0
+
+// Implementação iterativa
+
 function buscaBinaria(lista, valorBusca, fnComp) {
     let inicio = 0
     let fim = lista.length - 1
