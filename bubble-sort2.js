@@ -38,4 +38,4 @@ console.time('Teste candidatos')
 bubbleSort(candidatos, (a, b) => a.NM_URNA_CANDIDATO > b.NM_URNA_CANDIDATO)
 console.timeEnd('Teste candidatos')
 
-console.log(candidatos.map(o => o.NM_URNA_CANDIDATO)) // exibe apenas a propriedade NM_URNA_CANDIDATO
+console.log(candidatos.map(o => [o.NM_URNA_CANDIDATO, o.NM_CANDIDATO])) // exibe apenas a propriedade NM_URNA_CANDIDATO e NM_CANDIDATO
