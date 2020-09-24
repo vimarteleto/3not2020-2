@@ -1,4 +1,13 @@
-function selectionSort(vetor) {
+/*
+    Função de comparação fnComp
+    - Recebe dois valores para comparação
+    - Retorna:
+        - true se o primeiro valor for maior que o segundo
+        - false caso contrario
+*/
+
+
+function selectionSort(vetor, fnComp) {
     let passadas = 0, comparacoes = 0, totalTrocas = 0
     
     // Função que encontra o menor número em um segmento de vetor.
@@ -6,8 +15,8 @@ function selectionSort(vetor) {
 
     function encontrarMenor(vetor, inicio) {
         let posMenor = inicio
-        for(let i = inicio + 1; i < vetor.length; i++) {                      
-            if(vetor[i] < vetor[posMenor]) posMenor = i
+        for(let i = inicio + 1; i < vetor.length; i++) {
+            if(fnComp(vetor[posMenor], vetor[i])) posMenor = i
             comparacoes++  
             
         }
@@ -21,7 +30,7 @@ function selectionSort(vetor) {
 
         // Se o valor encontrador for menor que o valor atual, fazemos a troca
         comparacoes++
-        if(vetor[posMenor] < vetor[i]) {
+        if(fnComp(vetor[i], vetor[posMenor])) {
             [vetor[posMenor], vetor[i]] = [vetor[i], vetor[posMenor]] // permuta de valores por desestruturação
             totalTrocas++
         }
@@ -29,16 +38,12 @@ function selectionSort(vetor) {
     console.log({passadas, comparacoes, totalTrocas})
 }
 
-const nums = [56, 78, 44, 23, 99, 14, 60, 37, 6, 82, 31, 65]
 
-selectionSort(nums)
-console.log(nums)
-
-let nomes = require('./dados/100-mil-nomes')
-console.time('Teste nomes')
-selectionSort(nomes)
-console.timeEnd('Teste nomes')
+let candidatos = require('./dados/candidatos-2018')
+console.time('Teste candidatos')
+selectionSort(candidatos, (x, y) => x.NM_CANDIDATO > y.NM_CANDIDATO)
+console.timeEnd('Teste candidatos')
 // Medindo a memória utilizada pelo programa
 let memoria = process.memoryUsage().heapUsed / 1024 / 1024
-console.log(nomes)
+console.log(candidatos)
 console.log('Memoria utilizada (MB):', memoria)
