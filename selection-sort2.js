@@ -38,7 +38,6 @@ function selectionSort(vetor, fnComp) {
     console.log({passadas, comparacoes, totalTrocas})
 }
 
-
 let candidatos = require('./dados/candidatos-2018')
 console.time('Teste candidatos')
 selectionSort(candidatos, (x, y) => x.NM_CANDIDATO > y.NM_CANDIDATO)
