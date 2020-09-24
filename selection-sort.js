@@ -33,3 +33,9 @@ const nums = [56, 78, 44, 23, 99, 14, 60, 37, 6, 82, 31, 65]
 
 selectionSort(nums)
 console.log(nums)
+
+let nomes = require('./dados/100-mil-nomes')
+console.time('Teste nomes')
+selectionSort(nomes)
+console.timeEnd('Teste nomes')
+console.log(nomes)
