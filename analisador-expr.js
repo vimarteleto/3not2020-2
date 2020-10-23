@@ -30,6 +30,26 @@ for(let i = 0; i < expr.length; i++) {
                 console.log(`ERRO: chave fechando na posição ${i} não tem a abertura correspondente`)
             }
             break
+        case ']':
+            info = analisador.pop()
+            // info não pode ser vazio e seu tipo deve ser CO  
+            if(info && info.tipo == 'CO') {
+                console.log(`Colchete aberto na posição ${info.pos} e fechada na posição ${i}`)
+            }
+            else {
+                console.log(`ERRO: colchete fechando na posição ${i} não tem a abertura correspondente`)
+            }
+            break
+        case ')':
+            info = analisador.pop()
+            // info não pode ser vazio e seu tipo deve ser PA  
+            if(info && info.tipo == 'PA') {
+                console.log(`Parentese aberto na posição ${info.pos} e fechada na posição ${i}`)
+            }
+            else {
+                console.log(`ERRO: parentese fechando na posição ${i} não tem a abertura correspondente`)
+            }
+            break
     }
 }
 

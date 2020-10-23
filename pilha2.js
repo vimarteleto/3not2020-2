@@ -1,4 +1,4 @@
-const Stack = require('./lib/Stack')
+const Stack = require('./lib/Stack2')
 
 let pilha = new Stack()
 
@@ -6,8 +6,6 @@ let pilha = new Stack()
 pilha.push(9)
 pilha.push(-8)
 pilha.push(4)
-
-
 console.log(pilha)
 console.log('Ultimo elemento:', pilha.peek())
 console.log('Tamanho:', pilha.size())
