@@ -2,7 +2,7 @@
     6 + { 8 / [3 - (9 * 2)] + (4 * 3)}
 */
 
-const Stack = require('./lib/Stack')
+const Stack = require('../lib/Stack')
 
 let analisador = new Stack()
 
