@@ -17,8 +17,8 @@ module.exports = class HashTable {
         ]
 
         // Função hash calculando o resto da divisão por 10
-        this.hash = function(data) {
-        const resto = data % 10
+        this.hash = function(x) {
+        const resto = x % 10
         return resto
         }
     }
