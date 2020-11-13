@@ -41,7 +41,7 @@ function comparaNome(obj, valorBusca) {
     else return 1 // valorBusca > obj.first_name
 }
 
-let listaNomes = require('./dados/lista-nomes')
+let listaNomes = require('../ordenacao/dados/lista-nomes')
 
 console.time('FAUSTO')
 console.log(buscaBinaria(listaNomes, 'FAUSTO', comparaNome))

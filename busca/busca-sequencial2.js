@@ -8,7 +8,7 @@ function buscaSequencial(lista, valorBusca, fnComp) {
     return -1 // valorBusca não foi encontrado em lista
 }
 
-const listaNomes = require('./dados/lista-nomes')
+const listaNomes = require('../ordenacao/dados/lista-nomes')
 
 function comparaNome(objeto, nome) {
     // Retorna true se o atributo first_name do objeto for igual a nome

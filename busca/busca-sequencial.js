@@ -104,7 +104,7 @@ console.timeEnd('Buscando valor 4110') // Encerra o cronometro
 
 
 
-const nomes = require('./dados/vetor-nomes') // Importando os dados de module.exports
+const nomes = require('../ordenacao/dados/vetor-nomes') // Importando os dados de module.exports
 
 console.log('---')
 
