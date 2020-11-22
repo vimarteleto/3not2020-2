@@ -16,16 +16,21 @@ module.exports = class HashTable {
             this.nove = []
         ]
 
-        // Função hash calculando o resto da divisão por 10
-        this.hash = function(x) {
-        const resto = x % 10
-        return resto
-        }
     }
 
+
+    // Função hash calculando o resto da divisão por 10
+    hash(value){
+        const resto = value % 10
+        return resto
+    }
+        
     // Método insert() para inserção e armazenamento dos valores na tabela
     insert(value) {
-        const pos = this.hash(value)
-        this.data[pos].push(value)
+        value = parseInt(value)
+        if(value >= 0 && !isNaN(value)) {
+            const pos = this.hash(value)
+            this.data[pos].push(value)
+        }
     }
 }
